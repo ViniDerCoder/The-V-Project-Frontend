@@ -19,6 +19,8 @@ export default function Headbar(props: Props) {
   return (
     <>
         <Box className="header-bar" sx={{backgroundColor: props.colorTheme.first}}>
+            <Box className="menu-user-icon" sx={{backgroundColor: props.colorTheme.third}}></Box>
+            <img src="https://www.w3schools.com/images/picture.jpg" className='menu-user-icon' alt=''></img>
             <Box className="menu-button" onClick={handleMenuButtonClick} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
                 <Box className="menu-button-element" sx={{
                     backgroundColor: !hover ? props.colorTheme.second : props.colorTheme.third,
