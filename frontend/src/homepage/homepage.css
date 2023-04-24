@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: row;
     height: 12vh;
-    z-index: 10;
     border-bottom-left-radius: 2vh;
     border-bottom-right-radius: 2vh;
 }
@@ -15,21 +14,25 @@
     right: 3vh;
     top: 3vh;
     width: 8vh;
-    z-index: 20
+    z-index: 999;
 }
 
 .menu-button-element{
     border-radius: 0.45vh;
-    height: 1.2vh;
-    z-index: 20
+    height: 1.2vh;;
 }
 
 .menu-user-icon {
-    position: absolute;
     width: 8vh;
     height: 8vh;
     right: 14vh;
     top: 2vh;
     border-radius: 50vh;
-    z-index: 20
+    z-index: 999;
+    position: absolute;
+}
+.sticky-homepage{
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }

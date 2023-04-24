@@ -12,7 +12,7 @@ export default function Headbar(props: Props) {
   return (
     <>
         <Box className="header-bar" sx={{backgroundColor: props.colorTheme.first, alignItems: "center"}}>
-            <Typography variant='h3' sx={{left: "3vh", position: "absolute", color: props.colorTheme.second, fontStyle: "oblique"}}>The-V-Project</Typography>
+            <Typography variant='h3' sx={{left: "3vh", position: "absolute", color: props.colorTheme.second, fontFamily: "monospace"}}>The-V-Project</Typography>
         </Box>
     </>
   )
