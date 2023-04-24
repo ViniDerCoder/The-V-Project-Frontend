@@ -1,6 +1,7 @@
 import { Box, Slide } from '@mui/material'
 import React from 'react'
-import { ColorThemeInterface } from '../Homepage';
+import { ColorThemeInterface } from '../../App';
+import * as ReactRouter from 'react-router-dom';
 
 interface SidebarProps{
     active: boolean;
@@ -8,6 +9,7 @@ interface SidebarProps{
 }
 
 export default function Sidebar(props: SidebarProps) {
+  const navigation = ReactRouter.useNavigate()
 
   return (
     <Slide direction="left" in={props.active} timeout={700} mountOnEnter unmountOnExit>
@@ -21,7 +23,9 @@ export default function Sidebar(props: SidebarProps) {
             borderBottomLeftRadius: "2vh",
             borderTopLeftRadius: "2vh",
         }}
-        ></Box>
+        >
+          <text onClick={() => navigation('/web/settings')}>Test</text>
+        </Box>
     </Slide>
   )
 }

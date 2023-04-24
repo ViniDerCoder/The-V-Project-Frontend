@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import { hover } from '@testing-library/user-event/dist/hover'
 import React, { useState } from 'react'
-import { ColorThemeInterface } from './Homepage'
+import { ColorThemeInterface } from '../App'
 import './homepage.css'
 
 interface MenuUserAndButtonInterface{
