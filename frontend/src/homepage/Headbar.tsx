@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import { ColorThemeInterface } from './Homepage'
+import { ColorThemeInterface } from '../App'
 import './homepage.css'
 
 interface Props{
