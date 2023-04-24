@@ -1,0 +1,34 @@
+.settings-title{
+    box-sizing: border-box;
+
+    position: sticky;
+    width: 27vw;
+    height: 16vh;
+    left: 0px;
+    top: 0px;
+
+    border-radius: 0px 0px 30px;
+
+    border-bottom: 0.3vh solid;
+}
+
+.settings-title-text{
+    position: absolute;
+    width: 27vw;
+    height: 16vh;
+
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 6vh;
+    line-height: 9vh;
+    align-items: center;
+    text-align: center;
+}
+
+.sidebar-menu{
+    position: absolute;
+    width: 23vw;
+    height: 83vh;
+    top: 16vh;
+}
