@@ -18,8 +18,8 @@ export default function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Homepage colorTheme={colorTheme} />}></Route>
-        <Route path='/web/home' element={<Homepage colorTheme={colorTheme} />}></Route>
-        <Route path='/web/settings' element={<Settings colorTheme={colorTheme}/>}></Route>
+        <Route path='/home' element={<Homepage colorTheme={colorTheme} />}></Route>
+        <Route path='/settings' element={<Settings colorTheme={colorTheme}/>}></Route>
       </Routes>
     </Router>
     );

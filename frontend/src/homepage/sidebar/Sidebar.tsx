@@ -1,4 +1,4 @@
-import { Box, Slide } from '@mui/material'
+import { Box, Slide, Typography } from '@mui/material'
 import React from 'react'
 import { ColorThemeInterface } from '../../App';
 import * as ReactRouter from 'react-router-dom';
@@ -24,8 +24,10 @@ export default function Sidebar(props: SidebarProps) {
             borderTopLeftRadius: "2vh",
         }}
         >
-          <text onClick={() => navigation('/web/settings')}>Test</text>
-        </Box>
+          <Box sx={{textAlign: "center", top: "5vh", margin: "20vh"}} onClick={() => navigation('/settings')}>
+            <Typography variant='h4'>Test</Typography>
+          </Box>
+        </Box> 
     </Slide>
   )
 }

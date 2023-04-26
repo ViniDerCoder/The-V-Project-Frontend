@@ -16,7 +16,7 @@ export default function Homepage(props: Props) {
     const location = useLocation()
 
     //Send to correct webpage if no path is defined
-    useEffect(() => location.pathname === '/' ? navigation('/web/home') : undefined)
+    useEffect(() => location.pathname === '/' ? navigation('/home') : undefined)
 
     const handleMenuButtonClick = () => {
         setSidebarActive(!sidebarActive)
@@ -26,7 +26,7 @@ export default function Homepage(props: Props) {
     <Box sx={{height: "300vh", width: "100%", backgroundColor: props.colorTheme.fourth}}>
         <Box className="sticky-homepage">
             <Headbar colorTheme={props.colorTheme}/>
-            <MenuUserAndButton colorTheme={props.colorTheme} handleMenuButtonClick={handleMenuButtonClick}/>
+            <MenuUserAndButton colorTheme={props.colorTheme} handleMenuButtonClick={handleMenuButtonClick} active={sidebarActive} />
             <Sidebar active={sidebarActive} colorTheme={props.colorTheme}></Sidebar>
         </Box>
     </Box>
