@@ -38,7 +38,7 @@ function MenuButton(props: MenuButtonInterface){
     
     return (
         <Box className="menu-button-element" sx={{
-            backgroundColor: !props.active ? !props.hover ? props.colorTheme.third : props.colorTheme.fourth : !props.hover ? props.colorTheme.fourth : props.colorTheme.first,
+            backgroundColor: !props.active ? !props.hover ? props.colorTheme.second : props.colorTheme.fourth : !props.hover ? props.colorTheme.fourth : props.colorTheme.first,
             mb: props.margin ? "1.2vh" : undefined
         }}
         ></Box>

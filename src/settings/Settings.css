@@ -1,4 +1,4 @@
-.settings-title{
+.settings-title {
     box-sizing: border-box;
     text-align: center;
     position: sticky;
@@ -11,7 +11,7 @@
     border-bottom: 0.3vh solid;
 }
 
-.settings-title-text{
+.settings-title-text {
     position: absolute;
     width: 27vw;
     height: 16vh;
@@ -23,9 +23,26 @@
     line-height: 9vh;
 }
 
-.sidebar-menu{
+.sidebar-menu {
     position: absolute;
     width: 23vw;
     height: 84vh;
     top: 16vh;
+}
+
+.sidebar-menu-selction-field {
+    position: absolute;
+    width: 19vw;
+    height: 7vh;
+    left: 2vw;
+
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.5vh;
+    line-height: 5vh;
+    display: flex;
+    align-items: center;
+
+    border-bottom: 0.001vh solid;
 }
