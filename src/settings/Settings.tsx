@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material"
+import { Box } from "@mui/material"
 import { ColorThemeInterface } from "../App"
 import './Settings.css'
 import General from './pages/General'
@@ -15,7 +15,7 @@ interface Props {
 }
 
 export default function Settings(props: Props) {
-    const [activePage = SettingPages.length, setActivePage] = useState(1)
+    const [activePage = SettingPages.length, setActivePage] = useState(0)
 
     const options = SettingPages.map((key, value) => {
         return(<Box className='sidebar-menu-selction-field' onClick={() => setActivePage(SettingPages.indexOf(key))} sx={{color: props.colorTheme.fourth, borderBottomColor: props.colorTheme.first, top: `${7*SettingPages.indexOf(key)+1}vh`}}>{key.title}</Box>)
@@ -23,10 +23,12 @@ export default function Settings(props: Props) {
 
     return(
         <Box sx={{height: "100vh", backgroundColor: props.colorTheme.fourth}}>
-            <Box className='settings-title' sx={{backgroundColor: props.colorTheme.first, borderBottomColor: props.colorTheme.second}}>
-                <Box className='settings-title-text' sx={{color: props.colorTheme.fourth}}>Test</Box>
+            <Box className='settings-title' sx={{backgroundColor: props.colorTheme.first, borderBottomColor: props.colorTheme.second, color: props.colorTheme.fourth}}>Settings</Box>
+            <Box className='settings-action-title' sx={{color: props.colorTheme.first}}>{SettingPages[activePage].title}</Box>
+            <Box className='settings-home-button' sx={{color: props.colorTheme.second}}><img alt="" src="../../../public/house.png" width={"100px"} height={"100px"}></img></Box>
+            <Box className='settings-action-slot'>
+                {SettingPages[activePage].component()}
             </Box>
-            {SettingPages[activePage].component()}
             <Box className='sidebar-menu' sx={{backgroundColor: props.colorTheme.first}}>
                 {options}
             </Box>

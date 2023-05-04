@@ -4,17 +4,9 @@
     position: sticky;
     width: 27vw;
     height: 16vh;
-    left: 0px;
-    top: 0px;
 
     border-radius: 0px 0px 30px;
     border-bottom: 0.3vh solid;
-}
-
-.settings-title-text {
-    position: absolute;
-    width: 27vw;
-    height: 16vh;
 
     font-family: 'Noto Sans SC';
     font-style: normal;
@@ -45,4 +37,45 @@
     align-items: center;
 
     border-bottom: 0.001vh solid;
+}
+
+.settings-action-slot {
+    left: 23vw;
+    height: 84vh;
+    width: auto;
+
+    background-color: yellow;
+}
+
+.settings-action-title {
+    position: absolute;
+    width: 20vw;
+    height: 5vh;
+    right: 26.5vw;
+    top: 3.5vh;
+
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5vh;
+    line-height: 5vh;
+    align-items: center;
+    text-align: center;
+}
+
+.settings-home-button {
+    position: absolute;
+    width: 10vw;
+    height: 10vh;
+    right: 5vw;
+    top: 3.5vh;
+
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 64px;
+    align-items: center;
+    text-align: center;
+
 }
