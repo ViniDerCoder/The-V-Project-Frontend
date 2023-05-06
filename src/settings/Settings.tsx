@@ -4,6 +4,9 @@ import './Settings.css'
 import General from './pages/General'
 import Profile_Settings from "./pages/Profile_Settings"
 import { useState } from "react"
+import * as ReactRouter from "react-router-dom"
+
+import { HiOutlineHome } from "react-icons/hi"
 
 const SettingPages = [
     {title: "General", component: General, unsavedChanges: false},
@@ -15,6 +18,8 @@ interface Props {
 }
 
 export default function Settings(props: Props) {
+    const navigation = ReactRouter.useNavigate()
+
     const [activePage = SettingPages.length, setActivePage] = useState(0)
 
     const options = SettingPages.map((key, value) => {
@@ -25,7 +30,7 @@ export default function Settings(props: Props) {
         <Box sx={{height: "100vh", backgroundColor: props.colorTheme.fourth}}>
             <Box className='settings-title' sx={{backgroundColor: props.colorTheme.first, borderBottomColor: props.colorTheme.second, color: props.colorTheme.fourth}}>Settings</Box>
             <Box className='settings-action-title' sx={{color: props.colorTheme.first}}>{SettingPages[activePage].title}</Box>
-            <Box className='settings-home-button' sx={{color: props.colorTheme.second}}><img alt="" src="../../../public/house.png" width={"100px"} height={"100px"}></img></Box>
+            <HiOutlineHome className='settings-home-button' color={props.colorTheme.first} onClick={() =>  {SettingPages.every(obj => !obj.unsavedChanges) ? navigation('/home') : showUnsavedChangesPopUp()}}/>
             <Box className='settings-action-slot'>
                 {SettingPages[activePage].component()}
             </Box>
@@ -35,3 +40,5 @@ export default function Settings(props: Props) {
         </Box>
     )
 }
+
+function showUnsavedChangesPopUp() {}
