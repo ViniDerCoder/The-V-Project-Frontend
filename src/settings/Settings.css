@@ -41,11 +41,12 @@
 }
 
 .settings-action-slot {
-    left: 23vw;
+    position: absolute;
     height: 84vh;
-    width: auto;
+    width: 77vw;
+    left: 23vw;
 
-    background-color: yellow;
+    background-color: lightblue;
 }
 
 .settings-action-title {
@@ -62,6 +63,7 @@
     line-height: 5vh;
     align-items: center;
     text-align: center;
+    white-space: nowrap;
 }
 
 .settings-home-button {
