@@ -11,12 +11,8 @@ interface SidebarProps{
 export default function Sidebar(props: SidebarProps) {
   const navigation = ReactRouter.useNavigate()
 
-  function test(){
-    console.log("end")
-  }
-
   return (
-    <Slide direction="left" in={props.active} timeout={700} onTransitionEnd={test} mountOnEnter unmountOnExit>
+    <Slide direction="left" in={props.active} timeout={700} mountOnEnter unmountOnExit>
         <Box sx={{
             backgroundColor: props.colorTheme.third, 
             width: "25%", 
