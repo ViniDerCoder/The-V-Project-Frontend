@@ -1,4 +1,5 @@
-import { Box } from "@mui/material"
+import { Box, Input } from "@mui/material"
+import "./Fields.css"
 
 interface Properties {
     colors: {
@@ -9,7 +10,10 @@ interface Properties {
 }
 
 export function Switch(props: Properties) {
-    return(
-        <Box sx={{backgroundColor: "yellow", width: "100px", height: "100px"}}></Box>
+    return (
+        <label className="switch">
+            <input type="checkbox" />
+            <span className="slider"></span>
+        </label>
     )
 }
