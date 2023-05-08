@@ -11,8 +11,8 @@
     font-family: 'Noto Sans SC';
     font-style: normal;
     font-weight: 700;
-    font-size: 6vh;
-    line-height: 9vh;
+    font-size: 4vw;
+    line-height: 14vh;
 }
 
 .sidebar-menu {
@@ -31,20 +31,22 @@
     font-family: 'Noto Sans SC';
     font-style: normal;
     font-weight: 700;
-    font-size: 3.5vh;
+    font-size: 2.5vw;
     line-height: 5vh;
     display: flex;
     align-items: center;
+    white-space: nowrap;
 
     border-bottom: 0.001vh solid;
 }
 
 .settings-action-slot {
-    left: 23vw;
+    position: absolute;
     height: 84vh;
-    width: auto;
+    width: 77vw;
+    left: 23vw;
 
-    background-color: rgb(0, 110, 255);
+    background-color: lightblue;
 }
 
 .settings-action-title {
@@ -57,25 +59,17 @@
     font-family: 'Noto Sans SC';
     font-style: normal;
     font-weight: 700;
-    font-size: 5vh;
+    font-size: 4vw;
     line-height: 5vh;
     align-items: center;
     text-align: center;
+    white-space: nowrap;
 }
 
 .settings-home-button {
     position: absolute;
-    width: 10vw;
+    width: 5vw;
     height: 10vh;
-    right: 5vw;
-    top: 3.5vh;
-
-    font-family: 'Font Awesome 5 Free';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 56px;
-    line-height: 64px;
-    align-items: center;
-    text-align: center;
-
+    right: 4.5vw;
+    top: 3vh;
 }
