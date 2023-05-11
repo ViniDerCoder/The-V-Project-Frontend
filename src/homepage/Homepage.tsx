@@ -9,25 +9,23 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 export interface Props{
     colorTheme: ColorThemeInterface
+    handleMenuButtonClick: Function
+    sidebarActive: boolean
 }
 export default function Homepage(props: Props) {
-    const [sidebarActive, setSidebarActive] = useState(false)
     const navigation = useNavigate()
     const location = useLocation()
 
     //Send to correct webpage if no path is defined
     useEffect(() => location.pathname === '/' ? navigation('/home') : undefined)
 
-    const handleMenuButtonClick = () => {
-        setSidebarActive(!sidebarActive)
-    }
 
   return (
     <Box sx={{height: "300vh", width: "100%", backgroundColor: props.colorTheme.fourth}}>
         <Box className="sticky-homepage">
             <Headbar colorTheme={props.colorTheme}/>
-            <MenuUserAndButton colorTheme={props.colorTheme} handleMenuButtonClick={handleMenuButtonClick} active={sidebarActive} />
-            <Sidebar active={sidebarActive} colorTheme={props.colorTheme}></Sidebar>
+            <MenuUserAndButton colorTheme={props.colorTheme} handleMenuButtonClick={props.handleMenuButtonClick} active={props.sidebarActive} />
+            <Sidebar active={props.sidebarActive} colorTheme={props.colorTheme}></Sidebar>
         </Box>
     </Box>
   )

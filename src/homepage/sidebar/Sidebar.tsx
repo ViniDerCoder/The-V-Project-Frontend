@@ -24,8 +24,9 @@ export default function Sidebar(props: SidebarProps) {
             borderTopLeftRadius: "2vh",
         }}
         >
-          <Box sx={{textAlign: "center", top: "5vh", margin: "20vh"}} onClick={() => navigation('/settings')}>
-            <Typography variant='h4'>Test</Typography>
+          <Box sx={{textAlign: "center", top: "5vh", margin: "20vh"}}>
+            <Typography variant='h4' onClick={() => navigation('/settings')}>Test</Typography>
+            <Typography variant='h4' onClick={() => navigation('/games')}>Games</Typography>
           </Box>
         </Box> 
     </Slide>
